@@ -1,0 +1,21 @@
+<div><%= link_to "Ask again", ask_path %></div>
+
+<div class="my_input">
+  <p>Your question</p>
+</div>
+<div class="my_input">
+<%=@input%>
+</div>
+
+
+<div class="answer">Answer:</div>
+<div class="answer">
+<% if @input == "I am going to work" %>
+   <%= "Great" %>
+   <% elsif @input.ends_with?("?") %>
+   <%= "Silly question, get dressed and go to work!" %>
+   <% else %>
+   <%= "I don't care, get dressed and go to work!" %>
+   <% end %>
+  </div>
+
